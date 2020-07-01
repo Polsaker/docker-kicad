@@ -9,7 +9,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 	apt-get -y install gnupg2 software-properties-common git xvfb  && \
 	add-apt-repository --yes ppa:inkscape.dev/stable && \
         add-apt-repository --yes ppa:js-reynaud/kicad-5.1 && \
-	apt-get -y update && apt-get -y install --no-install-recommends kicad inkscape && \
+	apt-get -y update && apt-get -y install kicad inkscape && \
 	apt-get -y autoremove && \
 	rm -rf /var/lib/apt/lists/* && \
 	rm kicad-ppa.pgp
